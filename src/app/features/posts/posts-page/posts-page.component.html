@@ -1,0 +1,23 @@
+<div class="posts-page">
+  @if (loading()) {
+    <div class="posts-page__loader">
+      <mat-spinner diameter="48" />
+    </div>
+  } @else {
+    <div class="posts-page__list">
+      @for (post of posts(); track post.id) {
+        <app-post-card
+          [post]="post"
+          [author]="getAuthor(post.userId)"
+          (liked)="onLike($event)"
+          (edited)="onEdit($event)"
+          (deleted)="onDelete($event)"
+        />
+      } @empty {
+        <p class="posts-page__empty">
+          No posts yet. Be the first to share something! 🎉
+        </p>
+      }
+    </div>
+  }
+</div>
