@@ -22,7 +22,7 @@
       "id": 4,
       "title": "Post z grzybem, co trujący jest. Ja bym nie jadł",
       "imageUrl": "https://gimpdlazielonych.pl/wp-content/uploads/2019/10/jak-zapisac-zdjecie-do-jpg-1.webp",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "userId": 1,
@@ -57,5 +57,11 @@
       "name": "Sylvester",
       "avatarUrl": "sylvester-avatar.jpg"
     }
-  ]
+  ],
+  "profile": {
+    "id": 1,
+    "name": "Pepe Le Pew",
+    "avatarUrl": "https://i.pravatar.cc/100?.jpg",
+    "bio": "Just a romantic skunk looking for love 🦨"
+  }
 }
