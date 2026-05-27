@@ -1,0 +1,31 @@
+<aside class="sidebar">
+  <nav class="sidebar__nav">
+    <a
+      mat-button
+      routerLink="/profile"
+      routerLinkActive="active-link"
+      class="sidebar__nav-item"
+    >
+      <mat-icon>account_circle</mat-icon>
+      My account
+    </a>
+
+    <a
+      mat-button
+      routerLink="/posts"
+      routerLinkActive="active-link"
+      class="sidebar__nav-item"
+    >
+      <mat-icon>textsms</mat-icon>
+      Posts
+    </a>
+  </nav>
+
+  <div class="sidebar__footer">
+    <!-- (click) zostanie dodany w Dniu 4 po implementacji dialogu -->
+    <button mat-button class="add-post-btn" disabled>
+      <mat-icon>add_circle_outline</mat-icon>
+      Add new post
+    </button>
+  </div>
+</aside>

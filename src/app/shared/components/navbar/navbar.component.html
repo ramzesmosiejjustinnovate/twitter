@@ -1,0 +1,26 @@
+<mat-toolbar class="navbar">
+  <div class="navbar__left">
+    <button mat-icon-button aria-label="Menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+
+  <div class="navbar__center">
+    <a routerLink="/posts" class="navbar__logo-link">
+      <img src="tweexxtter-logo.png" alt="Tweexxtter" height="36" />
+    </a>
+  </div>
+
+  <div class="navbar__right">
+    @if (profile()) {
+      <button mat-button class="user-chip" routerLink="/profile">
+        <span class="user-chip__name">{{ profile()!.name }}</span>
+        <img
+          [src]="profile()!.avatarUrl"
+          [alt]="profile()!.name"
+          class="user-chip__avatar"
+        />
+      </button>
+    }
+  </div>
+</mat-toolbar>

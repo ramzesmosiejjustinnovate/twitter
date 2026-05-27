@@ -1,0 +1,55 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  height: 64px;
+}
+
+.navbar__left,
+.navbar__center,
+.navbar__right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__center {
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar__logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar__right {
+  justify-content: flex-end;
+}
+
+.user-chip {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  border-radius: 24px !important;
+  background-color: #fce4ec !important;
+  padding: 4px 8px 4px 16px !important;
+  height: 40px !important;
+}
+
+.user-chip__name {
+  font-weight: 500;
+  color: #333;
+}
+
+.user-chip__avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
