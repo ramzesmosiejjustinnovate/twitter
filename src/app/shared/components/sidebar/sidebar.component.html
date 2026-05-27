@@ -22,8 +22,7 @@
   </nav>
 
   <div class="sidebar__footer">
-    <!-- (click) zostanie dodany w Dniu 4 po implementacji dialogu -->
-    <button mat-button class="add-post-btn" disabled>
+    <button mat-button class="add-post-btn" (click)="openAddPostDialog()">
       <mat-icon>add_circle_outline</mat-icon>
       Add new post
     </button>

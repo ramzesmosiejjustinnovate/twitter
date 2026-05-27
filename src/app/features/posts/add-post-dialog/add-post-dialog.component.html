@@ -1,0 +1,55 @@
+<h2 mat-dialog-title class="dialog-title">
+  <mat-icon>add_circle_outline</mat-icon>
+  Add new post
+</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="form" class="dialog-form">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" placeholder="Post title..." />
+      @if (form.get('title')?.hasError('required') && form.get('title')?.touched) {
+        <mat-error>Title is required</mat-error>
+      }
+      @if (form.get('title')?.hasError('maxlength')) {
+        <mat-error>Title cannot exceed 100 characters</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Content</mat-label>
+      <textarea
+        matInput
+        formControlName="content"
+        placeholder="What's on your mind?"
+        rows="4"
+      ></textarea>
+      @if (form.get('content')?.hasError('required') && form.get('content')?.touched) {
+        <mat-error>Content is required</mat-error>
+      }
+      @if (form.get('content')?.hasError('maxlength')) {
+        <mat-error>Content cannot exceed 500 characters</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Image URL (optional)</mat-label>
+      <mat-icon matPrefix>image</mat-icon>
+      <input
+        matInput
+        formControlName="imageUrl"
+        placeholder="https://example.com/image.jpg"
+      />
+      @if (form.get('imageUrl')?.hasError('pattern') && form.get('imageUrl')?.touched) {
+        <mat-error>Please enter a valid URL (starting with http:// or https://)</mat-error>
+      }
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end" class="dialog-actions">
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-flat-button (click)="save()" [disabled]="form.invalid">
+    Add Post
+  </button>
+</mat-dialog-actions>
