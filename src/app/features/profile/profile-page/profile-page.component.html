@@ -1,0 +1,20 @@
+<div class="profile-page">
+  @if (loading()) {
+    <div class="profile-page__loader">
+      <mat-spinner diameter="48" />
+    </div>
+  } @else if (profile()) {
+    @if (isEditing()) {
+      <app-profile-edit
+        [profile]="profile()!"
+        (saved)="onSave($event)"
+        (cancelled)="onCancel()"
+      />
+    } @else {
+      <app-profile-view
+        [profile]="profile()!"
+        (editRequested)="onEdit()"
+      />
+    }
+  }
+</div>

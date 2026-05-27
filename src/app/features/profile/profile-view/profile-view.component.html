@@ -1,0 +1,43 @@
+<mat-card class="profile-card">
+  <mat-card-content>
+    <div class="profile-header">
+      <img
+        [src]="profile.avatarUrl"
+        [alt]="profile.name"
+        class="profile-avatar"
+      />
+      <div class="profile-info">
+        <h2 class="profile-name">{{ profile.name }}</h2>
+        @if (profile.bio) {
+          <p class="profile-bio">{{ profile.bio }}</p>
+        }
+      </div>
+    </div>
+
+    <mat-divider class="profile-divider" />
+
+    <div class="profile-details">
+      <div class="profile-detail-row">
+        <mat-icon class="detail-icon">badge</mat-icon>
+        <span>{{ profile.name }}</span>
+      </div>
+      <div class="profile-detail-row">
+        <mat-icon class="detail-icon">image</mat-icon>
+        <span class="detail-url">{{ profile.avatarUrl }}</span>
+      </div>
+      @if (profile.bio) {
+        <div class="profile-detail-row">
+          <mat-icon class="detail-icon">info</mat-icon>
+          <span>{{ profile.bio }}</span>
+        </div>
+      }
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions class="profile-actions">
+    <button mat-flat-button (click)="editRequested.emit()">
+      <mat-icon>edit</mat-icon>
+      Edit Profile
+    </button>
+  </mat-card-actions>
+</mat-card>
