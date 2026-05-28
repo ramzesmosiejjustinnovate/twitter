@@ -1,0 +1,33 @@
+.posts-page {
+  max-width: 680px;
+}
+
+.posts-page__header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.add-btn {
+  background-color: var(--mat-sys-primary) !important;
+  color: white !important;
+  border-radius: 24px !important;
+}
+
+.posts-page__loader {
+  display: flex;
+  justify-content: center;
+  padding: 64px;
+}
+
+.posts-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.posts-page__empty {
+  text-align: center;
+  color: #888;
+  padding: 64px 0;
+}

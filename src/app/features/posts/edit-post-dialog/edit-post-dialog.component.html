@@ -1,0 +1,43 @@
+<h2 mat-dialog-title class="dialog-title">Edytuj post</h2>
+
+<mat-dialog-content class="dialog-content">
+  <form [formGroup]="form" class="dialog-form">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Tytuł</mat-label>
+      <input matInput formControlName="title" />
+      @if (form.get('title')?.hasError('required') && form.get('title')?.touched) {
+        <mat-error>Tytuł jest wymagany</mat-error>
+      }
+      @if (form.get('title')?.hasError('maxlength')) {
+        <mat-error>Maksymalnie 120 znaków</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Treść</mat-label>
+      <textarea
+        matInput
+        formControlName="content"
+        rows="4"
+      ></textarea>
+      @if (form.get('content')?.hasError('required') && form.get('content')?.touched) {
+        <mat-error>Treść jest wymagana</mat-error>
+      }
+      @if (form.get('content')?.hasError('maxlength')) {
+        <mat-error>Maksymalnie 500 znaków</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>URL zdjęcia (opcjonalne)</mat-label>
+      <input matInput formControlName="imageUrl" placeholder="https://..." />
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end" class="dialog-actions">
+  <button mat-button (click)="cancel()">Anuluj</button>
+  <button mat-flat-button class="submit-btn" [disabled]="form.invalid" (click)="submit()">
+    Zapisz zmiany
+  </button>
+</mat-dialog-actions>

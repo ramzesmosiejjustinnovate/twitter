@@ -1,0 +1,27 @@
+<div class="posts-page">
+  <div class="posts-page__header">
+    <button mat-flat-button class="add-btn" (click)="openAddDialog()">
+      <mat-icon>add</mat-icon>
+      Add new post
+    </button>
+  </div>
+
+  @if (loading()) {
+    <div class="posts-page__loader">
+      <mat-spinner diameter="48" />
+    </div>
+  } @else {
+    <div class="posts-page__list">
+      @for (post of posts(); track post.id) {
+        <app-post-card
+          [post]="post"
+          (liked)="onLike($event)"
+          (edited)="onEdit($event)"
+          (deleted)="onDelete($event)"
+        />
+      } @empty {
+        <p class="posts-page__empty">Brak postów. Dodaj pierwszy! 🎉</p>
+      }
+    </div>
+  }
+</div>
