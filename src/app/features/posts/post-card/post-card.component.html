@@ -6,8 +6,8 @@
       [alt]="post().user?.name"
       class="post-card__avatar"
     />
-    <mat-card-title class="post-card__author">{{ post().user?.name ?? 'Unknown' }}</mat-card-title>
-    <mat-card-subtitle class="post-card__title">{{ post().title }}</mat-card-subtitle>
+    <mat-card-title>{{ post().user?.name ?? 'Unknown' }}</mat-card-title>
+    <mat-card-subtitle>{{ post().title }}</mat-card-subtitle>
   </mat-card-header>
 
   @if (post().imageUrl) {
@@ -19,17 +19,17 @@
   </mat-card-content>
 
   <mat-card-actions class="post-card__actions">
-    <button mat-icon-button class="action-btn action-btn--like" (click)="onLike()" aria-label="Like">
+    <button mat-icon-button color="primary" (click)="onLike()" aria-label="Like">
       <mat-icon>favorite</mat-icon>
     </button>
     <span class="post-card__likes">{{ post().likes }}</span>
 
     <span class="post-card__spacer"></span>
 
-    <button mat-icon-button class="action-btn action-btn--edit" (click)="onEdit()" aria-label="Edit">
+    <button mat-icon-button (click)="onEdit()" aria-label="Edit">
       <mat-icon>edit</mat-icon>
     </button>
-    <button mat-icon-button class="action-btn action-btn--delete" (click)="onDelete()" aria-label="Delete">
+    <button mat-icon-button (click)="onDelete()" aria-label="Delete">
       <mat-icon>delete</mat-icon>
     </button>
   </mat-card-actions>

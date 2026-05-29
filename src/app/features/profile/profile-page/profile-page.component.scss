@@ -8,12 +8,6 @@
   padding: 64px;
 }
 
-.profile-card {
-  border-radius: 16px !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
-  background-color: white !important;
-}
-
 .profile-card__content {
   display: flex;
   align-items: center;
@@ -30,39 +24,11 @@
   flex-shrink: 0;
 }
 
-.profile-card__info {
-  flex: 1;
-}
-
-.profile-card__name {
-  margin: 0 0 8px;
-  font-size: 22px;
-  font-weight: 700;
-  color: #222;
-}
-
-.profile-card__bio {
-  margin: 0;
-  font-size: 15px;
-  color: #555;
-  line-height: 1.5;
-}
-
-.profile-card__bio--empty {
-  color: #aaa;
-  font-style: italic;
-}
-
 .profile-card__actions {
   padding: 0 16px 16px !important;
   display: flex;
   justify-content: flex-end;
   gap: 8px;
-}
-
-.profile-card__edit-title {
-  font-size: 18px !important;
-  font-weight: 600 !important;
 }
 
 .profile-card__form-content {
@@ -77,10 +43,4 @@
 
 .full-width {
   width: 100%;
-}
-
-.edit-btn {
-  background-color: var(--mat-sys-primary) !important;
-  color: white !important;
-  border-radius: 20px !important;
 }

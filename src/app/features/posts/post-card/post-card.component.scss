@@ -1,7 +1,5 @@
 .post-card {
   border-radius: 16px !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
-  background-color: white !important;
 }
 
 .post-card__header {
@@ -15,15 +13,6 @@
   object-fit: cover;
 }
 
-.post-card__author {
-  font-weight: 600 !important;
-  font-size: 15px !important;
-}
-
-.post-card__title {
-  font-size: 13px !important;
-}
-
 .post-card__image {
   max-height: 280px;
   object-fit: cover;
@@ -35,9 +24,7 @@
 
   p {
     margin: 0;
-    font-size: 15px;
     line-height: 1.5;
-    color: #333;
   }
 }
 
@@ -48,32 +35,9 @@
 }
 
 .post-card__likes {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--mat-sys-primary);
   margin-left: 2px;
 }
 
 .post-card__spacer {
   flex: 1;
-}
-
-.action-btn--like {
-  color: var(--mat-sys-primary);
-}
-
-.action-btn--edit {
-  color: #888;
-
-  &:hover {
-    color: var(--mat-sys-primary);
-  }
-}
-
-.action-btn--delete {
-  color: #888;
-
-  &:hover {
-    color: #e53935;
-  }
 }

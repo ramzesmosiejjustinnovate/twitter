@@ -1,4 +1,4 @@
-<h2 mat-dialog-title class="dialog-title">Edytuj post</h2>
+<h2 mat-dialog-title>Edytuj post</h2>
 
 <mat-dialog-content class="dialog-content">
   <form [formGroup]="form" class="dialog-form">
@@ -15,11 +15,7 @@
 
     <mat-form-field appearance="outline" class="full-width">
       <mat-label>Treść</mat-label>
-      <textarea
-        matInput
-        formControlName="content"
-        rows="4"
-      ></textarea>
+      <textarea matInput formControlName="content" rows="4"></textarea>
       @if (form.get('content')?.hasError('required') && form.get('content')?.touched) {
         <mat-error>Treść jest wymagana</mat-error>
       }
@@ -37,7 +33,7 @@
 
 <mat-dialog-actions align="end" class="dialog-actions">
   <button mat-button (click)="cancel()">Anuluj</button>
-  <button mat-flat-button class="submit-btn" [disabled]="form.invalid" (click)="submit()">
+  <button mat-flat-button color="primary" [disabled]="form.invalid" (click)="submit()">
     Zapisz zmiany
   </button>
 </mat-dialog-actions>
